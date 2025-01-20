@@ -2,17 +2,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Emoji&display=swap");
 
 :root {
-  --darkblue: #1f2937;
+  --darkblue: #09122c;
   --secondarytxt-size: 18px;
-  --secondarytxt-color: #e5e7eb;
+  --secondarytxt-color: #000000;
   /* Button and CTA background color */
-  --accent-color: #3882f6;
+  --accent-color: #872341;
   /* Quote BG Color */
-  --quoteBG: #e5e7eb;
+  --quoteBG: #e17564;
   /* Hero Height */
   --sectionheight: 500px;
   /* Logo Text & Hero Title Color */
-  --logo-hero-color: #f9faf8;
+  --logo-hero-color: #e17564;
 }
 
 * {
@@ -30,17 +30,21 @@ body {
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 38px;
   font-weight: 900;
 }
-
 h3 {
   font-size: 36px;
   font-weight: 900;
 }
+.box-text {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
 
 nav {
-  background-color: white;
+  background-color: #ffffff;
   height: 80px;
 }
 
@@ -71,10 +75,11 @@ nav {
   gap: 20px;
   font-size: var(--secondarytxt-size);
   list-style: none;
+  font-weight: bold;
 }
 
 .navbar ul a {
-  color: black;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
@@ -126,7 +131,7 @@ nav {
 }
 
 .hero .hero-button:hover {
-  background-color: #3374dd;
+  background-color: #eb3144;
   cursor: pointer;
 }
 
@@ -163,7 +168,7 @@ nav {
 }
 
 .info img {
-  border: #3882f6;
+  border: #eb3144;
   border-style: solid;
   border-radius: 15px;
   padding: 20px;
@@ -177,6 +182,7 @@ nav {
 .info .box p {
   margin-top: 8px;
   white-space: nowrap;
+  text-align: center;
 }
 
 .quote {
@@ -184,7 +190,7 @@ nav {
   align-items: center;
   justify-content: center;
   height: var(--sectionheight);
-  background-color: #e5e7eb;
+  background-color: #e17564;
   flex: 1;
   padding: 75px;
 }
@@ -243,7 +249,7 @@ nav {
   background-color: var(--accent-color);
   border-radius: 10px;
   font-size: var(--secondarytxt-size);
-  color: #fff;
+  color: #000000;
   font-weight: 700;
   border: solid 2px;
   margin-top: 15px;
@@ -251,7 +257,7 @@ nav {
 }
 
 .CTA .CTA-button:hover {
-  background-color: #3374dd;
+  background-color: #e17564;
   cursor: pointer;
 }
 
@@ -269,7 +275,7 @@ nav {
 }
 
 .footer a {
-  color: #dabe1f;
+  color: #df9755;
   padding-right: 3px;
   text-decoration: none;
   font-size: 1.2rem;
@@ -277,6 +283,41 @@ nav {
 
 .nerd {
   font-family: "Noto Color Emoji", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* เพิ่มช่องว่างระหว่างกล่อง */
+}
+
+.box {
+  text-align: center; /* จัดข้อความให้อยู่กึ่งกลางใต้รูปภาพ */
+  width: 150px; /* กำหนดความกว้างของแต่ละกล่อง */
+}
+
+.box img {
+  width: 100%; /* ปรับให้ภาพขยายเต็มความกว้างของกล่อง */
+  height: 150px; /* กำหนดความสูงของภาพ */
+  object-fit: cover; /* ทำให้ภาพพอดีกับพื้นที่ โดยไม่เสียสัดส่วน */
+  border-radius: 8px; /* ทำให้มุมภาพโค้งมน */
+}
+.here-secondary-text {
+  font-family: 'Arial', sans-serif; /* เลือกฟอนต์ */
+  font-size: 16px; /* กำหนดขนาดตัวอักษร */
+  line-height: 1.6; /* เพิ่มความสูงบรรทัด */
+  text-align: justify; /* จัดข้อความให้ชิดขอบซ้ายและขวา */
+  margin-right: 40px; /* เพิ่มระยะห่างด้านขวา */
+  padding: 5px 20px; /* ระยะห่างด้านใน: ซ้าย-ขวา 20px */
+  background-color: #e17564; /* เพิ่มพื้นหลังเพื่อดูระยะชัดขึ้น */
+  border-radius: 10px; /* มุมกล่องโค้งมน */
+  box-shadow: 0 4px 8px rgba(128, 86, 86, 0.1); /* เพิ่มเงาเล็กน้อย */
+}
+.hero img {
+  border: #e17564;
+  border-style: solid;
+  border-radius: 15px;
+  padding: 20px;
+  aspect-ratio: 3 / 2;
 }
 
 @media (max-width: 768px) {
@@ -307,7 +348,7 @@ nav {
     padding: 62.5px 62.5px 62.5px 62.5px;
     display: none;
   }
-
+  
   .hero .hero-button {
     margin: 35px auto 0px auto;
   }
@@ -315,6 +356,7 @@ nav {
   .hero h2 {
     text-align: left;
   }
+
   
   .hero p {
     text-align: left;
@@ -322,6 +364,7 @@ nav {
 
   .info .box p {
     white-space: inherit;
+    
   }
 
   .quote {
